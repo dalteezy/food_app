@@ -5,11 +5,11 @@ class Recipe
   field :cooktime, type: Integer
   field :difficulty, type: Integer
 
-  has_many :recipe_ingredients
+#  has_many :recipe_ingredients
 
   #bring back an array of recipes
   def recipes
-  Recipe.find self.ingredients.map(&:recipe_id)
+    Recipe.find self.ingredients.map(&:recipe_id)
   end
 
   # bring back and array of all recipe IDs

@@ -1,4 +1,4 @@
-class RecipeIngredients
+class RecipeIngredient
   include Mongoid::Document
 
   belongs_to :ingredient
