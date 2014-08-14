@@ -1,21 +1,10 @@
-
-
 <h1> Ingredients Page </h1>
 
-<div class="ingredients">
-  <div class="col-md-2">.col-md-2</div>
-  <div class="col-md-2">.col-md-2</div>
-  <div class="col-md-2">.col-md-2</div>
-  <div class="col-md-2">.col-md-2</div>
-  <div class="col-md-2">.col-md-2</div>
-  <div class="col-md-2">.col-md-2</div>
-  
-</div>
-
-
+<% @ingredients.each do |ingredient| %>
+  <%= ingredient.name %> - <%= ingredient.amount %> 
+<% end %>
 
 <div class="ingredients">
-  
   <div class="col-md-2">.col-md-2</div>
   <div class="col-md-2">.col-md-2</div>
   <div class="col-md-2">.col-md-2</div>
@@ -26,7 +15,16 @@
 
 
 <div class="ingredients">
-  
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+</div>
+
+
+<div class="ingredients">
   <div class="col-md-2">.col-md-2</div>
   <div class="col-md-2">.col-md-2</div>
   <div class="col-md-2">.col-md-2</div>
