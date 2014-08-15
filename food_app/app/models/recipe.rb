@@ -1,11 +1,17 @@
 class Recipe
   include Mongoid::Document
+  include Mongoid::Paperclip
   field :name , type: String
   field :ingredient, type: String
   field :cooktime, type: Integer
   field :difficulty, type: Integer
 
  has_many :recipe_ingredients
+
+
+ belongs_to :recipe
+
+
 
   def ingredients
   end

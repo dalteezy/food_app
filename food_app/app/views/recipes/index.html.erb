@@ -1,6 +1,13 @@
 <h1> Recipes </h1>
 
-
+<ul>
+  <% @recipes.each do |r| %>
+  <li>
+    <strong> <%= r.name %> </strong>[ <%= r.cooktime %> ] 
+    <%= link_to "Click for recipe info", recipe_path(r) %>
+  </li>
+  <% end %>
+</ul>
 
 
 <div class="recipes">
