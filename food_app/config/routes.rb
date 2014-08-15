@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   resources :mains
 
   resources :ingredients
+  # get    'recipes/' =>          'recipes#index',    as: :recipes
+  # get    'recipes/:id' =>       'recipes#show',     as: :recipe
+
+  # get    'recipes/:id' =>       'recipes#show',     as: :recipe
 
   # TODO: create an api for angularjs to access recipes via ingredients selection
 
