@@ -3,5 +3,5 @@ class Ingredient
   field :name, type: String
   field :amount, type: Integer
 
-  has_many :recipe_ingredients
+  # has_many :recipe_ingredients
 end
