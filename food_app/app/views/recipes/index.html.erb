@@ -1,9 +1,10 @@
 <h1> Recipes </h1>
+<%= link_to "Add a Recipe", new_recipe_path %>
 
 <ul>
   <% @recipes.each do |r| %>
-  <li>
-    <strong> <%= r.name %> </strong> <%= r.cooktime %>
+  
+    <strong><%= r.name %> </strong> <%= r.cooktime %>
       <div class="recipes"> 
       <div class="col-md-4"><%= link_to (image_tag r.image.url, width: "150"), recipe_path(r) %></div>
     </div>

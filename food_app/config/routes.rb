@@ -37,6 +37,7 @@ get 'verified', to: 'sessions#new'
   # get 'recipes' => 'users#index'
   post 'recipes' => 'recipes#create'
   get 'recipes/new' => 'recipes#new'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

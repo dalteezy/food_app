@@ -8,14 +8,19 @@ class RecipesController < ApplicationController
   end
 
   def edit
+    @recipe = Recipe.find(params[:id])
   end
 
   def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update_attributes(params.require(:recipe).permit(:name, :image)) 
+      redirect_to recipes_path
   end
 
   
   def destroy
-    Recipe.find(id).destroy
+    Recipe.find(params[:id]).destroy
+    redirect_to recipes_path
   end
 
 
@@ -30,4 +35,5 @@ class RecipesController < ApplicationController
       redirect_to recipes_path
     end
   end
+end
 end
