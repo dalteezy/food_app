@@ -24,11 +24,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-  # from posted back junk, save a new Inventory item
   def create
-    @recipe = Recipe.new(params.require(:inventory).permit(:name)) 
-    if recipe.save
-      redirect_to recipe_path
+    @recipe = Recipe.new(params.require(:recipe).permit(:name, :image)) 
+    if @recipe.save
+      redirect_to recipes_path
     end
   end
 end

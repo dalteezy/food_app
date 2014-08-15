@@ -7,9 +7,11 @@ class Recipe
   field :difficulty, type: Integer
 
  has_many :recipe_ingredients
+ has_mongoid_attached_file :image 
+ validates_attachment_content_type :image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 
- belongs_to :recipe
+
 
 
 
