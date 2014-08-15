@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+angular.module("food",[])
+.controller("foodCtrl", ["$scope", "$http", function($scope, $http) {
+	$scope.getRecipes = function() {
+		// get all the recipes based on selected ingredients
+		console.log('test');
+	}
+
+}])

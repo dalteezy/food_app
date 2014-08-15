@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :ingredients
 
-  
+  # TODO: create an api for angularjs to access recipes via ingredients selection
 
 get 'verified', to: 'sessions#new'
 

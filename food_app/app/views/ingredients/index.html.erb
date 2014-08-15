@@ -1,9 +1,11 @@
 <h1> Ingredients Page </h1>
 
-<% @ingredients.each do |ingredient| %>
-  <%= ingredient.name %> - <%= ingredient.amount %> 
-<% end %>
-
+<div class="ingredients" ng-controller="foodCtrl">
+  <% @ingredients.each do |ingredient| %>
+    <input type="checkbox" ng-model="ingredient[$index]" ng-change="getRecipes()" /> <%= ingredient.name %><br/>
+  <% end %>
+</div>
+<!-- 
 <div class="ingredients">
   <div class="col-md-2">.col-md-2</div>
   <div class="col-md-2">.col-md-2</div>
@@ -32,3 +34,4 @@
   <div class="col-md-2">.col-md-2</div>
   <div class="col-md-2">.col-md-2</div>
 </div>
+ -->
