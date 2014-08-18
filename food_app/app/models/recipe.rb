@@ -5,6 +5,7 @@ class Recipe
   field :ingredient, type: String
   field :cooktime, type: Integer
   field :difficulty, type: Integer
+  field :directions, type: String
 
  has_many :recipe_ingredients
  has_mongoid_attached_file :image 
