@@ -15,6 +15,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     if @recipe.update_attributes(params.require(:recipe).permit(:name, :image)) 
       redirect_to recipes_path
+    end
   end
 
   
@@ -35,5 +36,5 @@ class RecipesController < ApplicationController
       redirect_to recipes_path
     end
   end
-end
+
 end
