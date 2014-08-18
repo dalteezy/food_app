@@ -12,17 +12,17 @@
 
   <ul class="col-md-6 pull-right">
     <% @recipes.each do |r| %>
-    
-      <strong><%= r.name %> </strong> <%= r.cooktime %>
+      
         <div class="recipes"> 
-        <div class="col-md-4"><%= link_to (image_tag r.image.url, width: "150"), recipe_path(r) %></div>
-      </div>
-
+          <div class="col-md-4">
+            <strong><%= r.name %> </strong> <%= r.cooktime %>
+            <%= link_to (image_tag r.image.url, width: "150"), recipe_path(r) %>
+          </div>
+        </div>
      <!--  <%= link_to "Click for recipe info", recipe_path(r) %> -->
-    </li>
-  <% end %>
-</ul>
-</div>
+      
+    <% end %>
+  </ul>
 <!-- 
 <div class="ingredients">
   <div class="col-md-2">.col-md-2</div>
